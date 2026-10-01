@@ -23,3 +23,4 @@ print(perebor)
 print(f'{max_s:.1f}')
 print(f'{(sum/(n-count_error)):.1f}')
 # privetik
+# last commit
