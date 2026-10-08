@@ -20,7 +20,7 @@ def ranking(names, scores):
     n = len(names)
     sorted_names = names
     sorted_scores = scores
-    for i in range(len(scores)):
+    for i in range(len(scores)-1):
         if sorted_scores[i] < sorted_scores[i + 1]:
             sorted_scores[i], sorted_scores[i + 1] = sorted_scores[i + 1], sorted_scores[i]
             sorted_names[i], sorted_names[i + 1] = sorted_names[i + 1], sorted_names[i]
@@ -28,7 +28,7 @@ def ranking(names, scores):
 
 def above_average(names, scores):
     l = []
-    av = average(score)
+    av = float(average(scores))
     for i in range(len(scores)):
         if scores[i] > av:
             l.append(names[i])
