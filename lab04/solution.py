@@ -1,10 +1,8 @@
 def winner(names, scores):
     n = 0
-    m = -999
     for i in range(len(scores)):
-        if scores[i] > m:
-            m = scores[i]
-            n = i
+        if scores[i] > scores[n]:
+            n = scores[i]
     return names[n]
 
 def average(scores):
