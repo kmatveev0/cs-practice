@@ -1,6 +1,3 @@
-names =  ["Аня", "Боря", "Вика"]
-scores = [7.0,   9.0,    9.0]
-
 def winner(names, scores):
     n = 0
     m = 0
@@ -11,8 +8,10 @@ def winner(names, scores):
     return names[n]
 
 def average(scores):
-    if scores != 0:
-        return f'{(sum(scores) / len(scores)):.2f}'
+    if len(scores) != 0:
+        return float(f'{(sum(scores) / len(scores)):.2f}')
+    elif len(scores) = 1:
+        return float(scores[0])
     else:
         return 0.0
 
@@ -28,13 +27,8 @@ def ranking(names, scores):
 
 def above_average(names, scores):
     l = []
-    av = float(average(scores))
+    av = average(scores)
     for i in range(len(scores)):
         if scores[i] > av:
             l.append(names[i])
     return l
-
-print(winner(names,scores))
-print(average(scores))
-print(ranking(names,scores))
-print(above_average(names,scores))
