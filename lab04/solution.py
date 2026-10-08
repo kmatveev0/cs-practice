@@ -2,7 +2,7 @@ def winner(names, scores):
     n = 0
     for i in range(len(scores)):
         if scores[i] > scores[n]:
-            n = scores[i]
+            n = i
     return names[n]
 
 def average(scores):
