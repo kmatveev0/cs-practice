@@ -1,6 +1,8 @@
 def winner(names, scores):
     n = 0
     m = 0
+    if any(scores[i] for i in len(scores) scores[i] < 0):
+        return "Error"
     for i in range(len(scores)):
         if scores[i] > m:
             m = scores[i]
