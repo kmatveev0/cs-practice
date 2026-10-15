@@ -29,7 +29,7 @@ def total_minutes(rows, kind):
         if row["тип"] != kind:
             continue
         total += float(row["минуты"])
-    return total
+    return round(total,1)
 
 def to_csv(counts):
     lines = ["тип,количество"]
