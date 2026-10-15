@@ -11,5 +11,5 @@ with open(name, "r", encoding="utf-8") as f:
     total = total_minutes(rows,"ошибка")
     print(total)
 
-with open("events-small.csv", "w", encoding="utf-8") as out:
+with open("summary.csv", "w", encoding="utf-8") as out:
     out.write(to_csv(counts))
