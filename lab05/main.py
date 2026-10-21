@@ -1,8 +1,6 @@
 from tablestats import *
 
-name = input()
-
-with open(name, "r", encoding="utf-8") as f:
+with open(input(), "r", encoding="utf-8") as f:
     lines = f.readlines()
     rows = read_rows(lines)
     print(len(rows))
