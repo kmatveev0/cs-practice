@@ -47,7 +47,7 @@ def total_minutes(rows: List[Dict], kind: str) -> float:
             total += float(row["минуты"].replace(",", "."))
         except:
             continue
-    return round(total, 2)
+    return round(total, 1)
 
 
 def to_csv(counts: dict) -> str:
