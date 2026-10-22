@@ -3,7 +3,7 @@ from typing import Dict, List
 def count_items(values: List) -> Dict:
     counts = {}
     for value in values:
-        counts[values] = counts.get(value, 0) + 1
+        counts[value] = counts.get(value, 0) + 1
     return counts
 
 def unique_sorted(values: List) -> List:
