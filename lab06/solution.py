@@ -1,3 +1,5 @@
+from typing import Dict, List
+
 def count_items(values: List) -> Dict:
     counts = {}
     for value in values:
