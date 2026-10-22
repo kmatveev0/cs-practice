@@ -10,7 +10,7 @@ def read_rows(lines: list[str]) -> list[dict]:
             continue
 
         if not head:
-            head = line
+            head = line.split(",")
             continue
 
         line = line.split(",")
