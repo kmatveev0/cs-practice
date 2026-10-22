@@ -1,13 +1,13 @@
 from tablestats import *
 
-with open(input(), "r", encoding="utf-8") as f:
+with open(input().strip(), "r", encoding="utf-8") as f:
     lines = f.readlines()
     rows = read_rows(lines)
     print(len(rows))
     counts = count_types(rows)
     print(len(counts))
     total = total_minutes(rows,"ошибка")
-    print(total)
+    print(f"{total:.1f}")
 
 with open("summary.csv", "w", encoding="utf-8") as out:
     out.write(to_csv(counts))
