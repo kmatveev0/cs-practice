@@ -1,4 +1,6 @@
-def read_rows(lines: list[str]) -> list[dict]:
+from typing import Dict, List
+
+def read_rows(lines: List[str]) -> List[Dict]:
     rows = []
     head = []
 
@@ -26,7 +28,7 @@ def read_rows(lines: list[str]) -> list[dict]:
     return rows
 
 
-def count_types(rows: list[dict]) -> dict:
+def count_types(rows: List[Dict]) -> dict:
     counts = {}
     for row in rows:
         kind = row["тип"]
@@ -36,7 +38,7 @@ def count_types(rows: list[dict]) -> dict:
     return counts
 
 
-def total_minutes(rows: list[dict], kind: str) -> float:
+def total_minutes(rows: List[Dict], kind: str) -> float:
     total = 0.0
     for row in rows:
         if row["тип"] != kind:
@@ -45,7 +47,7 @@ def total_minutes(rows: list[dict], kind: str) -> float:
             total += float(row["минуты"].replace(",", "."))
         except:
             continue
-    return round(total, 1)
+    return round(total, 2)
 
 
 def to_csv(counts: dict) -> str:
@@ -53,4 +55,4 @@ def to_csv(counts: dict) -> str:
     for kind in sorted(counts):
         line = kind + "," + str(counts[kind])
         lines.append(line)
-    return "\n".join(lines)
+    return "\n".join(lines) + "\n"
