@@ -7,7 +7,7 @@ with open(input().strip(), "r", encoding="utf-8") as f:
     counts = count_types(rows)
     print(len(counts))
     total = total_minutes(rows,"ошибка")
-    print(f"{total:.1f}")
+    print(total)
 
 with open("summary.csv", "w", encoding="utf-8") as out:
     out.write(to_csv(counts))

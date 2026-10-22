@@ -56,3 +56,5 @@ def to_csv(counts: dict) -> str:
         line = kind + "," + str(counts[kind])
         lines.append(line)
     return "\n".join(lines) + "\n"
+
+print(read_rows(["дата,тип,минуты",""," 2026-03-01 ,запуск ,1.5"]))
