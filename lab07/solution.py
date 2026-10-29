@@ -4,7 +4,7 @@ import numpy as np
 def reshape_rows(values: List[float], width: int) -> List[List[float]]:
     arr = np.asarray(values, dtype=float)
     if (arr.size != 0) and (arr.size % width == 0):
-        return arr.reshape(arr.size // width, -1)
+        return arr.reshape(arr.size // width, -1).tolist()
     else:
         return []
 
