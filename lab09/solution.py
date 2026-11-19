@@ -1,0 +1,23 @@
+import numpy as np
+
+def make_hours() -> list(int):
+    return np.arange(0, 24, 3).tolist()
+
+def vector_report(values: list[float]) -> dict:
+    arr = np.asarray(values, dtype=float)
+    return arr[2], arr[-1], arr[2:6].tolist(), arr[::2].tolist(), arr[::-1].tolist()
+
+def change_vector(values: list[float]) -> list[float]:
+    arr = np.asarray(values, dtype=float).copy()
+    arr[2:5] = 99
+    arr[::2] = -1
+    return arr.tolist()
+
+def cap_above(values: list[float], limit: float) -> list[float]:
+    arr = np.asarray(values, dtype=float).copy()
+    arr[arr > limit] = limit
+    return arr.tolist()
+
+def celsius_to_fahrenheit(values: list[float]) -> list[float]:
+    arr = np.asarray(values, dtype=float)
+    return (arr * 9 / 5 + 32).tolist()
